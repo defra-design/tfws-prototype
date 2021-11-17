@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Start page example
+{% if serviceName %} {{ serviceName }} {% endif %} - Start page
 {% endblock %}
 
 {% block header %}
@@ -10,38 +10,33 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Section</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link">Subsection</a>
-      </li>
-    </ol>
-  </div>
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
       <h1 class="govuk-heading-xl">
         {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
 
+
       <p>Use this service to:</p>
-
       <ul class="govuk-list govuk-list--bullet">
-        <li>do something</li>
-        <li>update your name, address or other details</li>
-        <li>do something else</li>
+        <li>get a flood warnings account for your organisation</li>
+        <li>set up flood warnings for more than 10 locations in England</li>
+        <li>give more than one person access to your organisation’s account</li>
       </ul>
-
-      <p>Registering takes around 5 minutes.</p>
+      <p>Getting set up takes about XX minutes.</p>
+      <div class="govuk-inset-text">
+        There is a different service if you need to <a href="/">get flood warnings for only a few locations</a>.
+      </div>
 
       <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
         Start now
@@ -49,44 +44,18 @@
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
         </svg>
       </a>
-
       <h2 class="govuk-heading-m">Before you start</h2>
+      <p>You will need to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>know the names and email addresses of everyone who needs access to your flood warnings account</li>
+        <li>have a file that lists the locations you need flood warnings for – a ShapeFile saved in ZIP format or an XLS spreadsheet</li>
+        <li>tell us how you want to receive flood warnings – by text, phonecall or email</li>
+      </ul>
 
-      <p>You can also <a href="#">register by post</a>.</p>
-
-      <p>The online service is also available in <a href="#">Welsh (Cymraeg)</a>.</p>
-
-      <p>You can’t register for this service if you’re in the UK illegally.</p>
-
-    </div>
-
-    <div class="govuk-grid-column-one-third">
-
-      <aside class="app-related-items" role="complementary">
-        <h2 class="govuk-heading-m" id="subsection-title">
-          Subsection
-        </h2>
-        <nav role="navigation" aria-labelledby="subsection-title">
-          <ul class="govuk-list govuk-!-font-size-16">
-            <li>
-              <a href="#">
-                Related link
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Related link
-              </a>
-            </li>
-            <li>
-              <a href="#" class="govuk-!-font-weight-bold">
-                More <span class="govuk-visually-hidden">in Subsection</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
+      <p>Each location needs to be a full UK postcode.</p>
+      <p>There are different services if your organisation is in Wales or Scotland. These are run by Natural Resources Wales and Scotland Environment Protection Agency.</p>
 
     </div>
+
   </div>
 {% endblock %}

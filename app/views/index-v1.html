@@ -14,23 +14,23 @@
       <p class="govuk-body">
         <a href="/prototype-admin/clear-data">Clear stored data</a> 
       </p>
-      <p class="govuk-body">The first iteration of TFWS builds on research conducted in Discovery and subsequent <a href="https://jamboard.google.com/d/1cM2Ne44zdZeY_79scOpVvIx_syteQf3a54jgG01BlV0/viewer?f=0">story mapping exercise</a>. It is a thin slice of the whole user journey aimed at teasing information from users </p>
+      <p class="govuk-body">The first iteration of TFWS builds on research conducted in Discovery and subsequent <a href="https://jamboard.google.com/d/1cM2Ne44zdZeY_79scOpVvIx_syteQf3a54jgG01BlV0/viewer?f=0">story mapping exercise</a>.</p>
+      <p><a href="https://jamboard.google.com/d/1cM2Ne44zdZeY_79scOpVvIx_syteQf3a54jgG01BlV0/viewer?f=0">Story Mapping - Targetted Flood Warnings (Google Jamboard)</a></p>
+      <p><a href="https://docs.google.com/drawings/d/10-yfjpNzIi08GECSiQaNqyK170DPvQnumvwr5Y1fHQE/edit">TFWS - Prototype Version 1 - Wireframe (Google Drawings)</a></p>
+      <p>It is a thin slice of the whole user journey aimed at teasing information from users </p>
 
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
       <!-- ########################################################################### -->
 
-      <h3 class="govuk-heading-m">Alpha design tests</h3>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
 
-      <!--#### <li><a href="/change-log">Prototype change log</a></li> ####-->
-      <section>
-        <h4><a href="/index-v1">Version 1</a></h4>
-        <p></p>
-        <p><a href="https://docs.google.com/drawings/d/10-yfjpNzIi08GECSiQaNqyK170DPvQnumvwr5Y1fHQE/edit">TFWS - Prototype Version 1 - Wireframe (Google Drawings)</a></p>
-      </section>
-
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-      <!-- ########################################################################### -->
+        {{
+            govukButton({
+                text: "Version 1",
+                href: "version-1/01-start.html"
+            })
+        }}
 
     </div>
   </div>
