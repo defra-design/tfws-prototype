@@ -32,7 +32,6 @@
     "govuk-frontend": "^3.14.0",
     "gulp": "^4.0.0",
     "gulp-nodemon": "^2.5.0",
-    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "inquirer": "^8.2.0",
     "keypather": "^3.0.0",
@@ -48,7 +47,9 @@
   },
   "devDependencies": {
     "glob": "^7.1.4",
+    "gulp-sass": "^5.0.0",
     "jest": "^27.3.1",
+    "sass": "^1.43.4",
     "standard": "^14.3.3",
     "supertest": "^6.1.6"
   },
