@@ -22,28 +22,47 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              How would you like to add your locations?
-            </h1>
-          </legend>
-          <div class="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                Using each postcode
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                By uploading a file containing all the locations
-              </label>
-            </div>
-          </div>
-        </fieldset>
+    
+          {{ govukRadios({
+            idPrefix: "how-do-you-want-to-add-your-locations",
+            name: "how-do-you-want-to-add-your-locations",
+            fieldset: {
+              legend: {
+                text: "How do you want to add your locations?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            
+            items: [
+              {
+                value: "using-each-postcode",
+                text: "Using each postcode"
+              },
+              {
+                value: "by-uploading-a-file-containing-all-the-locations",
+                text: "By uploading a file containing all the locations"
+              }
+            ]
+          }) }}
+          {% set detailsContentHTML %}
+            <p>You can upload:</p>
+            <ul>
+              <li>ESRI ShapeFile, saved as a ZIP file containing a *.SHP, a *.DBF, and a *.SHX file.</li>
+              <li>XLS or XLSX spreadsheet</li>
+            </ul>
+          {% endset %}
+          {{ govukDetails({
+              summaryText: "File types you can use",
+              html: detailsContentHTML
+            }) }}
+            {{
+              govukButton({
+                text: "Save and continue",
+                href: "04-upload-file"
+              })
+            }}
+
       </div>
     </div>
   </div>
