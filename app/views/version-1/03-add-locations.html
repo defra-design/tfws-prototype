@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-{% if serviceName %} {{ serviceName }} {% endif %} - Start page
+{% if serviceName %} {{ serviceName }} {% endif %} - How do you want to add your locations?
 {% endblock %}
 
 {% block header %}
@@ -36,12 +36,12 @@
             
             items: [
               {
-                value: "using-each-postcode",
-                text: "Using each postcode"
+                value: "enter-each-postcode-manually",
+                text: "Enter each postcode manually"
               },
               {
-                value: "by-uploading-a-file-containing-all-the-locations",
-                text: "By uploading a file containing all the locations"
+                value: "upload-a-file-of-all-the-locations",
+                text: "Upload a file of all the locations"
               }
             ]
           }) }}

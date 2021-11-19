@@ -21,11 +21,12 @@
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column">
+    <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
         {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
       {{ govukTable({
+        caption: "Dates and amounts",
         captionClasses: "govuk-table__caption--m",
         firstCellIsHeader: true,
         head: [
@@ -103,7 +104,7 @@
       {{
         govukButton({
           text: "Continue",
-          href: "07-set-up-warning-notifications"
+          href: "06-check-locations"
         })
       }}
     </div>
