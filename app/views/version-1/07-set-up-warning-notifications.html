@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-{% if serviceName %} {{ serviceName }} {% endif %} - Start page
+{% if serviceName %} {{ serviceName }} {% endif %} - Set up your warnings
 {% endblock %}
 
 {% block header %}
@@ -23,88 +23,18 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        {% if serviceName %} {{ serviceName }} {% endif %}
+        Set up your warnings
       </h1>
-      {{ govukTable({
-        caption: "Dates and amounts",
-        captionClasses: "govuk-table__caption--m",
-        firstCellIsHeader: true,
-        head: [
-          {
-            text: "Location reference"
-          },
-          {
-            text: "Location name"
-          },
-          {
-            text: "Type"
-          },
-          {
-            text: "View location"
-          },
-          {
-            text: "Remove location"
-          }
-        ],
-        rows: [
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            },
-            {
-              text: ""
-            },
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            },
-            {
-              text: ""
-            },
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ],
-          [
-            {
-              text: ""
-            },
-            {
-              text: ""
-            },
-            {
-              text: ""
-            },
-            {
-              text: ""
-            },
-            {
-              text: ""
-            }
-          ]
-        ]
-      }) }}
-      <p><a href="#">Add more locations</a></p>
+      <p class="govuk-body">You can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>choose different levels of warning for each of your locations</li>
+        <li>cselect the same warning level for all of your locations</li>
+        <li>cchange your warning settings at any time</li>
+      </ul>
       {{
         govukButton({
           text: "Continue",
-          href: "06-check-locations"
+          href: "08-warning-settings"
         })
       }}
     </div>

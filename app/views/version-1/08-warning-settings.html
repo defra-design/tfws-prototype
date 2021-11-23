@@ -25,8 +25,102 @@
       <h1 class="govuk-heading-l">
         {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
+    </div>
+  </div>
+    <div class="govuk-grid-column">
+
+        {% set checkboxOne %}
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkboxOne" name="checkboxOne" type="checkbox" value="checkboxOne">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkboxOne">
+                  </label>
+                </div>
+              </div>
+        {% endset %}
+
+        {% set checkboxTwo %}
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkboxTwo" name="checkboxTwo" type="checkbox" value="checkboxTwo">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkboxTwo">
+                  </label>
+                </div>
+              </div>
+        {% endset %}
+
+        {% set checkboxThree %}
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkboxThree" name="checkboxThree" type="checkbox" value="checkboxThree">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkboxThree">
+                  </label>
+                </div>
+              </div>
+        {% endset %}
+
+        {% set checkboxFour %}
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkboxFour" name="checkboxFour" type="checkbox" value="checkboxFour">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkboxFour">
+                  </label>
+                </div>
+              </div>
+        {% endset %}
+
+        {% set checkboxFive %}
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkboxive" name="checkboxFive" type="checkbox" value="checkboxive">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkboxive">
+                  </label>
+                </div>
+              </div>
+        {% endset %}
+
+        {% set checkboxSix %}
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkboxSix" name="checkboxSix" type="checkbox" value="checkboxSix">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkboxSix">
+                  </label>
+                </div>
+              </div>
+        {% endset %}
+
+        {% set checkboxSeven %}
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkboxSeven" name="checkboxSeven" type="checkbox" value="checkboxSeven">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkboxSeven">
+                  </label>
+                </div>
+              </div>
+        {% endset %}
+
+        {% set checkboxEight %}
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkboxEight" name="checkboxEight" type="checkbox" value="checkboxEight">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkboxEight">
+                  </label>
+                </div>
+              </div>
+        {% endset %}
+
+        {% set checkboxNine %}
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkboxNine" name="checkboxNine" type="checkbox" value="checkboxNine">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkboxNine">
+                  </label>
+                </div>
+              </div>
+        {% endset %}
+
+
       {{ govukTable({
-        caption: "Dates and amounts",
         captionClasses: "govuk-table__caption--m",
         firstCellIsHeader: true,
         head: [
@@ -37,13 +131,13 @@
             text: "Location name"
           },
           {
-            text: "Type"
+            text: "Alerts"
           },
           {
-            text: "View location"
+            text: "Warnings"
           },
           {
-            text: "Remove location"
+            text: "Severe warnings"
           }
         ],
         rows: [
@@ -55,13 +149,16 @@
               text: ""
             },
             {
-              text: ""
+              text: "",
+              html: checkboxOne
             },
             {
-              text: ""
+              text: "",
+              html: checkboxTwo
             },
             {
-              text: ""
+              text: "",
+              html: checkboxThree
             }
           ],
           [
@@ -72,13 +169,16 @@
               text: ""
             },
             {
-              text: ""
+              text: "",
+              html: checkboxFour
             },
             {
-              text: ""
+              text: "",
+              html: checkboxFive
             },
             {
-              text: ""
+              text: "",
+              html: checkboxSix
             }
           ],
           [
@@ -89,22 +189,25 @@
               text: ""
             },
             {
-              text: ""
+              text: "",
+              html: checkboxSeven
             },
             {
-              text: ""
+              text: "",
+              html: checkboxEight
             },
             {
-              text: ""
+              text: "",
+              html: checkboxNine
             }
           ]
         ]
       }) }}
-      <p><a href="#">Add more locations</a></p>
+      <p class="govuk-body"><a href="#">Add more locations</a></p>
       {{
         govukButton({
-          text: "Continue",
-          href: "06-check-locations"
+          text: "Save",
+          href: "09-thank-you"
         })
       }}
     </div>
