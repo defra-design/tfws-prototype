@@ -23,27 +23,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="03-add-locations" method="post">
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <h1 class="govuk-heading-l">
-                Terms for using this flood warning service
-              </h1>
-            </legend>
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="mixed" name="mixed" type="checkbox" value="paperless">
-                <label class="govuk-label govuk-checkboxes__label" for="mixed">
-                  I have read and agree to the <a href="">terms and conditions</a> for this service
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
+        <h1 class="govuk-heading-l">
+          Thank you
+        </h1>
         {{
           govukButton({
-            text: "Save",
-            href: "..index-v1"
+            text: "Back to start",
+            href: "version-1/index-v1"
           })
         }}
       </form>  
