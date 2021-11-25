@@ -26,13 +26,14 @@
         Confirm upload
       </h1>
       <p class="govuk-body">You selected this file to upload.</p>
-      <p class="govuk-body">[filename]</p>
+      <p class="govuk-body">[filename and preview]</p>
         {{
           govukButton({
-            text: "Confirm and continue",
+            text: "Add file",
             href: "06-check-locations"
           })
         }}
+      <p class="govuk-body"><a class="govuk-link" href="upload-file">Choose a different file</a></p>
     </div>
   </div>
 {% endblock %}
