@@ -1,0 +1,180 @@
+{% set locationdata =
+[
+ {
+   "locationReference": "LOC-001",
+   "locationName": "Alan D Rosenburg Cpa Pc",
+   "easting": 517798,
+   "northing": 466240,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-002",
+   "locationName": "Cap Gemini America",
+   "easting": 517777,
+   "northing": 466224,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-003",
+   "locationName": "Elliott, John W Esq",
+   "easting": 517926,
+   "northing": 466218,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-004",
+   "locationName": "Mcmahan, Ben L",
+   "easting": 517709,
+   "northing": 466068,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-005",
+   "locationName": "Champagne Room",
+   "easting": 517969,
+   "northing": 466260,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-006",
+   "locationName": "Thompson, Michael C Esq",
+   "easting": 517958,
+   "northing": 466252,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-007",
+   "locationName": "Wrangle Hill Auto Auct & Slvg",
+   "easting": 517702,
+   "northing": 466022,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-008",
+   "locationName": "In Communications Inc",
+   "easting": 517870,
+   "northing": 466090,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-009",
+   "locationName": "Bizerba Usa Inc",
+   "easting": 517994,
+   "northing": 466219,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-010",
+   "locationName": "Max Video",
+   "easting": 517737,
+   "northing": 466215,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-011",
+   "locationName": "K & R Associates Inc",
+   "easting": 517690,
+   "northing": 466196,
+   "type": "Business",
+   "locationTeam": "Team A"
+ },
+ {
+   "locationReference": "LOC-012",
+   "locationName": "Cain, John M Esq",
+   "easting": 517969,
+   "northing": 466260,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-013",
+   "locationName": "Sound Vision Corp",
+   "easting": 517643,
+   "northing": 466143,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-014",
+   "locationName": "Rowley/hansell Petetin",
+   "easting": 517958,
+   "northing": 466252,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-015",
+   "locationName": "Industrial Engineering Assocs",
+   "easting": 517649,
+   "northing": 466175,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-016",
+   "locationName": "Weiss Spirt & Guyer",
+   "easting": 517771,
+   "northing": 466209,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-017",
+   "locationName": "Crowan, Kenneth W Esq",
+   "easting": 517829,
+   "northing": 465973,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-018",
+   "locationName": "Rittenhouse Motor Co",
+   "easting": 517706,
+   "northing": 466043,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-019",
+   "locationName": "Modern Plastics Corp",
+   "easting": 517912,
+   "northing": 466227,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-020",
+   "locationName": "Galloway Electric Co Inc",
+   "easting": 518079,
+   "northing": 466675,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-021",
+   "locationName": "Niagara Custombuilt Mfg Co",
+   "easting": 517982,
+   "northing": 466271,
+   "type": "Business",
+   "locationTeam": "Team B"
+ },
+ {
+   "locationReference": "LOC-022",
+   "locationName": "Practical Periphrals",
+   "easting": 517864,
+   "northing": 466110,
+   "type": "Business",
+   "locationTeam": "Team B"
+ }
+]
+%}
