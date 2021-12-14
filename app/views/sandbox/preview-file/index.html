@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% from "data/location-data.dta" import locationdata %}
+
+{% block pageTitle %}
+{% if serviceName %} {{ serviceName }} {% endif %} - Confirm upload
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Confirm upload
+      </h1>
+      <p class="govuk-body">You selected this file to upload.</p>
+      <div style="max-height:200px; overflow:scroll; border:1px solid #ccc">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m govuk-heading-xl">Your locations</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Location name</th>
+            <th scope="col" class="govuk-table__header">Location reference</th>
+            <!-- <th scope="col" class="govuk-table__header">Easting</th>
+            <th scope="col" class="govuk-table__header">Northing</th> -->
+            <th scope="col" class="govuk-table__header">Type</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {% for locate in locationdata %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                      {{ locate.locationName }} 
+                </td>
+                <td class="govuk-table__cell">
+                      {{ locate.locationReference }} 
+                </td>
+                <!-- <td class="govuk-table__cell">
+                      {{ locate.easting }} 
+                </td>
+                <td class="govuk-table__cell">
+                      {{ locate.northing }} 
+                </td>
+                -->
+                <td class="govuk-table__cell">
+                      {{ locate.type }} 
+                </td>
+              </tr>
+            {% else %}
+                No data
+            {% endfor %}
+        </tbody>
+      </table>
+      </div>
+        {{
+          govukButton({
+            text: "Add file",
+            href: "06-check-locations"
+          })
+        }}
+      <p class="govuk-body"><a class="govuk-link" href="/version-1/04-upload-file">Choose a different file</a></p>
+    </div>
+  </div>
+{% endblock %}
