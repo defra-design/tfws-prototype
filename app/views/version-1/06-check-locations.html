@@ -24,12 +24,12 @@
 {% block content %}
 
     <div class="govuk-grid-column">
-      
+
       <table class="govuk-table">
         <caption class="govuk-table__caption govuk-table__caption--m govuk-heading-xl">Your locations</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Location name</th>
+            <th scope="col" class="govuk-table__header">Location person</th>
             <th scope="col" class="govuk-table__header">Location reference</th>
             <!-- <th scope="col" class="govuk-table__header">Easting</th>
             <th scope="col" class="govuk-table__header">Northing</th> -->
@@ -42,20 +42,20 @@
           {% for locate in locationdata %}
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                      {{ locate.locationName }} 
+                      {{ locate.locationName }}
                 </td>
                 <td class="govuk-table__cell">
-                      {{ locate.locationReference }} 
+                      {{ locate.locationReference }}
                 </td>
                 <!-- <td class="govuk-table__cell">
-                      {{ locate.easting }} 
+                      {{ locate.easting }}
                 </td>
                 <td class="govuk-table__cell">
-                      {{ locate.northing }} 
+                      {{ locate.northing }}
                 </td>
                 -->
                 <td class="govuk-table__cell">
-                      {{ locate.type }} 
+                      {{ locate.type }}
                 </td>
                 <td class="govuk-table__cell">
                   <a class="govuk-link" href="#">View</a>
